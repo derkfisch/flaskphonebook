@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Phone Number{% endblock %}
+
+{% block header %}
+    <h1 class="text-center">Add New Phone Number</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <div class="card my-3">
+                <div class="card-body">
+                    <form action="" method="post">
+                        {{ form.csrf_token }}
+
+                        {{ form.first_name.label }}*
+                        {{ form.first_name(class='form-control', placeholder="Enter Contact's First Name") }}
+
+                        {{ form.last_name.label }}*
+                        {{ form.last_name(class='form-control', placeholder="Enter Contact's Last Name") }}
+
+                        {{ form.address.label }}
+                        {{ form.address(class='form-control', placeholder="Enter Contact's Address") }}
+
+                        {{ form.phone_number.label }}*
+                        {{ form.phone_number(class='form-control', placeholder="Enter Contact's Phone Number") }}
+
+                        {{ form.submit(class='btn btn-warning w-100 mt-3') }}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
